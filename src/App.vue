@@ -1,19 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="">
+  <h1>NEWS</h1>
+<div class="">
+<news-list :news="news"></news-list>
+</div>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import NewsList from './components/NewsList.vue'
 
 export default {
   name: 'app',
+  data(){
+    return {
+      news: []
+    }
+  },
+  mounted(){
+    fetch("https://content.guardianapis.com/search?q=brexit&format=json&api-key=test")
+    .then(res => res.json())
+    .then(news => this.news = news)
+  },
   components: {
-    HelloWorld
+    "news-list": NewsList
   }
-}
+  }
 </script>
 
 <style>
