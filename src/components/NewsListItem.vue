@@ -1,11 +1,11 @@
 <template lang="html">
-  <h2>{{beer}}</h2>
+  <h2>{{news.webTitle}}</h2>
 </template>
 
 <script>
 export default {
-  name: 'beer-list-item',
-  props: ['beer']
+  name: 'news-list-item',
+  props: ['news']
 }
 </script>
 

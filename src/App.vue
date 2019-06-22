@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div id="app">
   <h1>NEWS</h1>
 <div class="">
 <news-list :news="news"></news-list>
@@ -21,7 +21,7 @@ export default {
   mounted(){
     fetch("https://content.guardianapis.com/search?q=brexit&format=json&api-key=test")
     .then(res => res.json())
-    .then(news => this.news = news)
+    .then(news => this.news = news.response.results)
   },
   components: {
     "news-list": NewsList

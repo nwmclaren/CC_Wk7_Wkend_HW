@@ -1,11 +1,19 @@
 <template lang="html">
-  <h2>{{news}}</h2>
+  <!-- <h2>{{news}}</h2> -->
+  <div>
+    <ul>
+      <news-list-item v-for="(article, index) in news" :news="article" :key="index"></news-list-item>
+    </ul>
+
+  </div>
 </template>
 
 <script>
+import NewsListItem from './NewsListItem.vue';
 export default {
   name:'news-list',
-  props: ['news']
+  props: ['news'],
+  components: {"news-list-item": NewsListItem}
 }
 </script>
 
