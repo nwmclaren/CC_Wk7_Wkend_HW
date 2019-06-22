@@ -4,6 +4,7 @@
 <div class="">
 <news-list :news="news"></news-list>
 </div>
+<router-view id="view"></router-view>
 </div>
 </template>
 
