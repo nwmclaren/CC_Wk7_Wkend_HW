@@ -1,8 +1,6 @@
 <template lang="html">
-  <!-- <h2>{{news.webTitle}}</h2> -->
   <div class="">
     <h2>{{news.webTitle}}</h2>
-    <!-- <button v-on:click="handleButton" type="button" name="button">Add Favourite</button> -->
     <button v-if="!inFavourites" v-on:click="handleButton" type="button" name="button">Add Favourite</button>
   </div>
 

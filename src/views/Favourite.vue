@@ -1,7 +1,6 @@
 <template lang="html">
   <div id="">
-    <h1>Favourite</h1>
-    <!-- <news-list :news="favourites"></news-list> -->
+    <h1>Favourites</h1>
     <news-list :news="favourites" :favourites="favourites"></news-list>
   </div>
 </template>

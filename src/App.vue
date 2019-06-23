@@ -1,16 +1,14 @@
 <template>
 <div id="app">
-  <h1>NEWS</h1>
+  <h1>NEWS ARTICLES</h1>
+  <h5>(add articles to your favourites by clicking on add favourite)</h5>
 <div class="">
-<!-- <news-list :news="news"></news-list> -->
 
 <nav> <router-link :to="{ name: 'news'}">News</router-link>
-  | <router-link :to="{ name: 'favourite'}">Favourite</router-link>
+  | <router-link :to="{ name: 'favourite'}">Favourites</router-link>
 </nav>
 </div>
 
-<!-- <router-view id="view"></router-view> -->
-<!-- <router-view :news="news" id="view"></router-view> -->
   <router-view :news="news" :favourites="favourites" id="view"></router-view>
 
 </div>
@@ -52,5 +50,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: lightgrey;
+  /* background-image: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg"; */
 }
 </style>
